@@ -10,7 +10,7 @@ if memo_type.to_i == 1
    puts "メモしたい内容を記入してください"
    puts "完了したらctrl+Dをおします"
    
-   CSV.open("{file_name}.csv",'w') do |csv|
+   CSV.open("#{file_name}.csv",'w') do |csv|
      memo_input = readlines
      csv << memo_input
    end
@@ -22,7 +22,7 @@ else memo_type.to_i == 2
    puts "編集したい内容を記入してください"
    puts "完了したらctrl+Dをおします"
    
-   CSV.open("{file_name}.csv",'a') do |csv|
+   CSV.open("#{file_name}.csv",'a') do |csv|
      memo_input = readlines
      csv << memo_input
    end
